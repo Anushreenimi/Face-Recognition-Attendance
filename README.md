@@ -19,7 +19,7 @@ Face recognition system using Python, OpenCV and Raspberrypi
 * Python 3
 * OpenCV
 * NumPy
-* Pillow (PIL)
+* face-recognition
 * Raspberry Pi (supports mobile IP Webcam)
 ## Project Structure
 Face Recognition Attendance
