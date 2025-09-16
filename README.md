@@ -35,7 +35,7 @@ open the raspberry pi terminal and run
 ```bash
 sudo apt update
 sudo apt install python3-pip -y
-pip3 install opencv-python opencv-contrib-python numpy pillow
+pip3 install opencv-python opencv-contrib-python face-recognition
 ```
 ### Capture Dataset
 run the dataset script to capture images
