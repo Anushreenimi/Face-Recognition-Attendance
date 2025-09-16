@@ -5,11 +5,9 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 
-# Enter your phone IP camera URL
-# Example: "http://192.168.1.5:8080/video"
-url = "http://<YOUR_PHONE_IP>:8080/video"
+url = "http://<YOUR_PHONE_IP>:8080/video" #enter ip address from phone app
 
-# Load known faces from the dataset
+#load known faces from the dataset
 path = "data/images"
 known_encodings, names = [], []
 
@@ -21,12 +19,12 @@ for person in os.listdir(path):
             known_encodings.append(encoding[0])
             names.append(person)
 
-# Attendance file
+#attendance file
 attendance_file = "attendance.csv"
 if not os.path.exists(attendance_file):
     pd.DataFrame(columns=["Name", "Time"]).to_csv(attendance_file, index=False)
 
-# Start camera
+#camera start
 cap = cv2.VideoCapture(url)
 
 while True:
@@ -69,3 +67,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
